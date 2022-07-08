@@ -1,0 +1,59 @@
+[{
+    "Id" : 1,
+    "Name" : "bench press",
+    "Category" : "weightlifting",
+    "Musclegroups" : ["chest", "biceps", "triceps", "shoulders"],
+    "Equipment" : ["bench", "barbell"],
+    "Skill" : "low"
+},
+{
+    "Id" : 2,
+    "Name" : "deadlift",
+    "Category" : "weightlifting",
+    "Musclegroups" : ["glutes", "hamstrings", "hip flexors", "back", "quads", "core"],
+    "Equipment" : ["barbell"],
+    "Skill" : "low"
+},
+{
+    "Id" : 3,
+    "Name" : "back squat",
+    "Category" : "weightlifting",
+    "Musclegroups" : ["back", "glutes", "hamstrings", "quads", "core"],
+    "Equipment" : ["barbell"],
+    "Skill" : "low"
+},
+{
+    "Id" : 4,
+    "Name" : "front squat",
+    "Category" : "weightlifting",
+    "Musclegroups" : ["back", "quads", "glutes", "hamstrings", "core", "shoulder", "lats"],
+    "Equipment" : ["barbell"],
+    "Skill" : "low"
+},
+{
+    "Id" : 5,
+    "Name" : "overhead press",
+    "Category" : "weightlifting",
+    "Musclegroups" : ["chest", "shoulders", "triceps", "upper back"],
+    "Equipment" : ["barbell"],
+    "Skill" : "low"
+},
+{
+    "Id" : 6,
+    "Name" : "clean",
+    "Category" : "weightlifting",
+    "Musclegroups" : ["hamstrings", "glutes", "quads", "calves", "back", "biceps", "shoulders", "core"],
+    "Equipment" : ["barbell"],
+    "Skill" : "low"
+},
+{
+    "Id" : 7,
+    "Name" : "pull-up",
+    "Category" : "bar",
+    "Musclegroups" : ["lats", "biceps", "delts", "core"],
+    "Equipment" : ["bar"],
+    "Skill" : "low"
+}
+
+
+]
