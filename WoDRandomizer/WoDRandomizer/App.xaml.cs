@@ -1,4 +1,5 @@
 ﻿using System;
+using WoDRandomizer.Models;
 using WoDRandomizer.Services;
 using WoDRandomizer.Views;
 using Xamarin.Forms;
@@ -8,12 +9,14 @@ namespace WoDRandomizer
 {
     public partial class App : Application
     {
+        public static Athlete athleteUser { get; set; }
 
         public App()
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
+            DependencyService.Register<ExerciseDataStore>();
+            athleteUser = new Athlete();
             MainPage = new AppShell();
         }
 

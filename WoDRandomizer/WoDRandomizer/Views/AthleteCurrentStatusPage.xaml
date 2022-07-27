@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WoDRandomizer.Views.AthleteCurrentStatusPage"
+             >
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="{StaticResource Primary}">
+            <Label x:Name="greetingLabel"
+                LineBreakMode="NoWrap"
+                TextColor="{StaticResource Accent}"
+                FontSize="20"
+                HorizontalTextAlignment="Center"
+                Margin="40,0,0,0"></Label>
+
+            <Label LineBreakMode="NoWrap"
+                   TextColor="{StaticResource White}"
+                   FontSize="16"
+                   FontAttributes="Bold"
+                   Text="How are you feeling today?"/>
+
+            <!--Energy-->
+
+            <Label LineBreakMode="NoWrap"
+                   TextColor="{StaticResource White}"
+                   FontSize="12"
+                   Text="How energetic do you feel?"/>
+            
+            <Label Text=""
+               x:Name="displayEnergy"
+               LineBreakMode="NoWrap"
+               TextColor="{StaticResource Accent}"
+               FontSize="10"/>
+            <Slider
+               x:Name="athleteEnergy"
+               Minimum="0"
+               Maximum="100"
+               MinimumTrackColor="{StaticResource Accent}"
+               MaximumTrackColor="{StaticResource DarkGrey}"
+            ValueChanged="OnEnergyValueChanged"></Slider>
+            
+            <!--Time-->
+
+            <Label LineBreakMode="NoWrap"
+                   TextColor="{StaticResource White}"
+                   FontSize="12"
+                   Text="How much time do you have? (in minutes)"/>
+
+            <Label Text=""
+               x:Name="displayTime"
+               LineBreakMode="NoWrap"
+               TextColor="{StaticResource Accent}"
+               FontSize="10"/>
+            <Slider
+               x:Name="athleteTime"
+               Minimum="0"
+               Maximum="100"
+               MinimumTrackColor="{StaticResource Accent}"
+               MaximumTrackColor="{StaticResource DarkGrey}"
+            ValueChanged="OnTimeValueChanged"></Slider>
+            
+            <!--Musclegroups to avoid-->
+
+            <Label LineBreakMode="NoWrap"
+                   TextColor="{StaticResource White}"
+                   FontSize="12"
+                   Text="Musclegroups to avoid in the workout?"/>
+
+            <StackLayout>
+                <CollectionView x:Name="MusclegroupsToAvoidView" ItemsSource="{Binding musclegroupsToAvoidSource}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Label Text="{Binding Name}"/>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+
+
+            <Button 
+                    Margin="0,10,0,0" Text="Continue"
+                    Clicked="OnContinueClicked"
+                    BackgroundColor="{StaticResource Accent}"
+                    TextColor="{StaticResource White}"/>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

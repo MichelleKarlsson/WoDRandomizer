@@ -12,8 +12,29 @@
   </ItemGroup>
 
   <ItemGroup>
+	<Compile Update="Views\AthleteEquipmentStatusPage.xaml.cs">
+      <DependentUpon>AthleteEquipmentStatusPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\AthleteCurrentStatusPage.xaml.cs">
+      <DependentUpon>AthleteCurrentStatusPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\NewAthletePage.xaml.cs">
+      <DependentUpon>NewAthletePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\SavedWorkoutsPage.xaml.cs">
+      <DependentUpon>SavedWorkoutsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\WelcomePage.xaml.cs">
       <DependentUpon>WelcomePage.xaml</DependentUpon>
     </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\AthleteCurrentStatusPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\AthleteEquipmentStatusPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

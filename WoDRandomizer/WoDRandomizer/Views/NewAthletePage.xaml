@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WoDRandomizer.Views.NewAthletePage"
+             Title="{Binding Title}"
+             xmlns:local="clr-namespace:WoDRandomizer.ViewModels"  
+             xmlns:model="clr-namespace:WoDRandomizer.Models"  
+             x:Name="BrowseItemsPage"
+              NavigationPage.HasNavigationBar="False">
+
+    <!--
+      x:DataType enables compiled bindings for better performance and compile time validation of binding expressions.
+      https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/data-binding/compiled-bindings
+    -->
+
+    <StackLayout Padding="10" BackgroundColor="{StaticResource Primary}" >
+        <Label Text="Name" 
+                                LineBreakMode="NoWrap" 
+                                TextColor="{StaticResource White}" 
+                                FontSize="13" />
+        <Entry
+                                x:Name="athleteName"
+                                BackgroundColor="{StaticResource Primary}"
+                                TextColor="{StaticResource Accent}"></Entry>
+        <Label Text="Sex" 
+                                LineBreakMode="NoWrap"
+                                TextColor="{StaticResource White}"
+                                FontSize="13" />
+        <StackLayout Orientation="Horizontal">
+            <RadioButton x:Name="athleteMale" Content="M" TextColor="{StaticResource Accent}" />
+            <RadioButton x:Name="athleteFemale" Content="F" TextColor="{StaticResource Accent}"/>
+        </StackLayout>
+        <Label Text="Age"
+                                   LineBreakMode="NoWrap"
+                                   TextColor="{StaticResource White}"
+                                   FontSize="13"/>
+        <Label Text=""
+               x:Name="displayAge"
+               LineBreakMode="NoWrap"
+               TextColor="{StaticResource Accent}"
+               FontSize="10"/>
+        <Slider
+               x:Name="athleteAge"
+               Minimum="0"
+               Maximum="100"
+               MinimumTrackColor="{StaticResource Accent}"
+               MaximumTrackColor="{StaticResource DarkGrey}"
+            ValueChanged="OnSliderValueChanged"></Slider>
+        <Label Text="Crossfit Level"
+                                   LineBreakMode="NoWrap"
+                                   TextColor="{StaticResource White}"
+                                   FontSize="13"/>
+        <StackLayout Orientation="Horizontal">
+            <RadioButton x:Name="athleteBeginner" Content="Beginner" TextColor="{StaticResource Accent}"/>
+            <RadioButton x:Name="athleteIntermediate" Content="Intermediate" TextColor="{StaticResource Accent}"/>
+            <RadioButton x:Name="athleteExpert" Content="Expert" TextColor="{StaticResource Accent}"/>
+        </StackLayout>
+        <Button 
+                    Margin="0,10,0,0" Text="Save"
+                    Clicked="SaveAthleteClicked"
+                    BackgroundColor="{StaticResource Accent}"
+                    TextColor="{StaticResource White}"/>
+
+    </StackLayout>
+
+</ContentPage>

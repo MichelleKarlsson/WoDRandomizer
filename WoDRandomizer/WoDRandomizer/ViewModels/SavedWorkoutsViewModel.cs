@@ -8,7 +8,7 @@ using Xamarin.Forms;
 namespace WoDRandomizer.ViewModels
 {
     [QueryProperty(nameof(ItemId), nameof(ItemId))]
-    public class ItemDetailViewModel : BaseViewModel
+    public class SavedWorkoutsViewModel : BaseViewModel
     {
         private string itemId;
         private string name;
