@@ -26,7 +26,7 @@
     "Id" : 4,
     "Name" : "front squat",
     "Category" : "weightlifting",
-    "Musclegroups" : ["back", "quads", "glutes", "hamstrings", "core", "shoulder", "lats"],
+    "Musclegroups" : ["back", "quads", "glutes", "hamstrings", "core", "shoulders", "lats"],
     "Equipment" : ["barbell"],
     "Skill" : "low"
 },
@@ -50,7 +50,7 @@
     "Id" : 7,
     "Name" : "pull-up",
     "Category" : "bar",
-    "Musclegroups" : ["lats", "biceps", "delts", "core"],
+    "Musclegroups" : ["lats", "biceps", "shoulders", "core"],
     "Equipment" : ["bar"],
     "Skill" : "low"
 }

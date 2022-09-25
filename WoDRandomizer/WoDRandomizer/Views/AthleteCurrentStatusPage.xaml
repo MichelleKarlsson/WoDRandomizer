@@ -66,13 +66,16 @@
                    Text="Musclegroups to avoid in the workout?"/>
 
             <StackLayout>
-                <CollectionView x:Name="MusclegroupsToAvoidView" ItemsSource="{Binding musclegroupsToAvoidSource}">
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            <Label Text="{Binding Name}"/>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>
+                <Grid x:Name="MusclegroupsToAvoidView">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                </Grid>
             </StackLayout>
 
 

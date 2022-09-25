@@ -13,22 +13,51 @@ namespace WoDRandomizer.Views
     public partial class AthleteCurrentStatusPage : ContentPage
     {
         List<string> MusclegroupsToAvoid { get; set; }
+        List<string> Musclegroups = new List<string> { "chest", "biceps", "triceps", "shoulders", "glutes", "hamstrings", "hip flexors", "back", "quads", "core", "lats", "upper back", "lower back", "calves" };
 
         public AthleteCurrentStatusPage()
         {
             InitializeComponent();
-            InitializeMusclegroups();
+            MusclegroupsToAvoid = new List<string>();
         }
 
-        private void InitializeMusclegroups() //TODO: refactor
-        {
-            MusclegroupsToAvoid.Add("");
-        }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
             greetingLabel.Text = "Welcome back, " + App.athleteUser.Name;
+            populateMuscleGroupsView();
+
+        }
+
+        public void populateMuscleGroupsView()
+        {
+            var indexRow = 0;
+            var indexColumn = 0;
+
+            foreach (var s in Musclegroups)
+            {
+                var button = new Button
+                {
+                    Text = s,
+                    VerticalOptions = LayoutOptions.Center,
+                    HorizontalOptions = LayoutOptions.Center,
+                    
+                };
+
+                MusclegroupsToAvoidView.Children.Add(button, indexColumn, indexRow);
+
+                if (indexColumn == 3)
+                {
+                    indexColumn = 0;
+                    indexRow += 1;
+                } else
+                {
+                    indexColumn += 1;
+                }
+                
+
+            }
 
         }
 
